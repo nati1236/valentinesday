@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>❤️ Valentine's Day</title> <!-- Dodano ikonkę serca do tytułu karty -->
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background-color: black;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: black; /* Zmiana koloru tła na czarny */
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+    .content {
+      text-align: center;
+      padding: 30px 20px;
     }
     .text {
-      font-size: 30px;
-      color: white;
+      font-size: 24px;
+      color: white; /* Zmiana koloru tekstu na biały */
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: #ff6666;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button-container button:hover {
+      background-color: #ff4d4d;
+    }
+    @media (max-width: 600px) {
+      .container {
+        border-radius: 0;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="box">
-    <iframe src="https://giphy.com/embed/qRtwZkH3TaQrJuAUmp" width="480" height="580" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-    <div class="text" style="color: white;">
-      Will U 🐝 Me Valentine?
-
-      <br>
-
-      <a href="https://www.jibjab.com/view/make/un-bee-lievable-sg/c20f2c18-e424-4b0f-9824-50fa67ebafc7"><button type="checked" id="y">YES</button></a>
-      <button type="checked" id="n" onclick="add()"> NO</button>
+  <div class="container">
+    <div class="content">
+      <iframe src="https://giphy.com/embed/qRtwZkH3TaQrJuAUmp" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <div class="text">
+        Will you 🐝 my Valentine?
+      </div>
+      <div class="button-container">
+        <a href="https://www.jibjab.com/view/make/un-bee-lievable-sg/c20f2c18-e424-4b0f-9824-50fa67ebafc7"><button type="button" id="y">YES</button></a>
+        <button type="button" id="n" onclick="add()">NO</button>
+      </div>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
